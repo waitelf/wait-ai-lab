@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>不要吃灰｜AI 个人内容记忆助手 - WeiTao AI Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #1d1d1f;
+        }
+        .apple-blur {
+            backdrop-filter: saturate(180%) blur(20px);
+            background-color: rgba(255, 255, 255, 0.72);
+        }
+        .prose h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-top: 3rem;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.025em;
+        }
+        .prose p {
+            font-size: 1.125rem;
+            line-height: 1.75;
+            color: #424245;
+            margin-bottom: 1.5rem;
+        }
+        .prose ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .prose li {
+            font-size: 1.125rem;
+            line-height: 1.75;
+            color: #424245;
+            margin-bottom: 0.5rem;
+        }
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background-color: #f5f5f7;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #86868b;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 w-full z-50 apple-blur border-b border-gray-200/50">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-2.5">
+                <a href="../index.html" class="flex items-center space-x-2.5 text-gray-900">
+                    <div class="w-5 h-5 bg-black rounded-[4px]"></div>
+                    <span class="font-bold text-lg tracking-tight text-black">Wait AI Lab</span>
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-600">
+                <a class="hover:text-black transition-colors" href="../index.html">Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-24">
+        <article class="max-w-[900px] mx-auto px-6 prose">
+            <!-- 1. 项目标题 -->
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">不要吃灰｜AI 个人内容记忆助手</h1>
+            
+            <!-- 2. 一句话介绍 -->
+            <p class="text-xl md:text-2xl text-gray-500 font-medium mb-12">
+                一个帮助个人高效留存内容、自动总结并沉淀知识的 AI 助手。
+            </p>
+
+            <!-- 6. 页面截图区域 (Hero Image) -->
+            <div class="mb-16 rounded-3xl overflow-hidden shadow-2xl bg-gray-100 aspect-video flex items-center justify-center relative group">
+                <img alt="项目封面图" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200"/>
+                <div class="absolute inset-0 bg-black/5"></div>
+            </div>
+
+            <!-- 3. 项目背景 -->
+            <section>
+                <h2>项目背景</h2>
+                <p>
+                    在日常聊天、阅读和信息浏览中，很多有价值的内容会快速被淹没。我希望做一个更轻量的记录方式：用户只需要把内容发送给机器人，系统就能自动理解、总结并沉淀下来，而不是让信息继续“吃灰”。
+                </p>
+            </section>
+
+            <!-- 4. 解决方案 -->
+            <section>
+                <h2>解决方案</h2>
+                <p>
+                    我设计了一个基于飞书群聊和自动化工作流的 AI 助手。整体流程是：
+                </p>
+                <ul>
+                    <li>用户在飞书群聊中 @机器人并发送内容</li>
+                    <li>系统通过 Webhook 接收消息</li>
+                    <li>调用大模型生成结构化总结</li>
+                    <li>将结果自动写入飞书多维表格</li>
+                    <li>完成内容留存与知识沉淀</li>
+                </ul>
+            </section>
+
+            <!-- 5. 核心功能 -->
+            <section>
+                <h2>核心功能</h2>
+                <div class="flex flex-wrap mb-6">
+                    <span class="tag">内容一键记录</span>
+                    <span class="tag">AI 自动总结</span>
+                    <span class="tag">结构化信息沉淀</span>
+                    <span class="tag">飞书多维表格自动写入</span>
+                    <span class="tag">适合个人知识管理场景</span>
+                </div>
+            </section>
+
+            <!-- 6. 更多截图区域 -->
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-6 my-12">
+                <div class="rounded-2xl overflow-hidden shadow-md bg-gray-50 flex flex-col border border-gray-100 relative group">
+                    <img alt="飞书聊天界面截图" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1577563906417-45a11b3f9dd0?auto=format&fit=crop&q=80&w=800"/>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md bg-gray-50 flex flex-col border border-gray-100 relative group">
+                    <img alt="总结结果截图" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&q=80&w=800"/>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md bg-gray-50 md:col-span-2 border border-gray-100 relative group">
+                    <img alt="多维表格截图" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1551288049-bbdac8a28a1e?auto=format&fit=crop&q=80&w=1200"/>
+                </div>
+            </section>
+
+            <!-- 7. 技术实现 -->
+            <section>
+                <h2>技术实现</h2>
+                <div class="flex flex-wrap">
+                    <span class="tag">FastAPI</span>
+                    <span class="tag">LangGraph</span>
+                    <span class="tag">Feishu Webhook</span>
+                    <span class="tag">Feishu API</span>
+                    <span class="tag">LLM</span>
+                </div>
+            </section>
+
+            <!-- 8. 项目收获 -->
+            <section>
+                <h2>项目收获</h2>
+                <p>
+                    这个项目让我真正把“创意 → 工作流 → 产品原型”跑通了一次。我在过程中练习了：
+                </p>
+                <ul>
+                    <li>如何把一个模糊想法拆成可执行流程</li>
+                    <li>如何设计 AI Agent 的输入处理输出</li>
+                    <li>如何将自动化系统接入真实工具场景</li>
+                    <li>如何把功能做成可验证的 MVP</li>
+                </ul>
+            </section>
+
+            <!-- 9. 下一项目跳转 -->
+            <div class="mt-24 pt-12 border-t border-gray-100 flex justify-between items-center">
+                <a href="../index.html" class="text-gray-400 hover:text-black transition-colors font-medium flex items-center gap-2">
+                    <span class="iconify" data-icon="lucide:arrow-left"></span> Back to Projects
+                </a>
+                <a href="ai-review-analysis.html" class="group text-right">
+                    <div class="text-sm text-gray-400 font-bold uppercase tracking-widest mb-2">Next Project</div>
+                    <div class="text-2xl font-bold group-hover:text-blue-600 transition-colors flex items-center gap-2 justify-end">
+                        AI 评论分析工具 <span class="iconify" data-icon="lucide:arrow-right"></span>
+                    </div>
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-gray-500 text-sm">© 2026 Wait AI Lab. Designed for Clarity.</p>
+        </div>
+    </footer>
+</body>
+</html>

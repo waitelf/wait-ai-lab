@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>AI 工作流自动化实验 - WeiTao AI Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #1d1d1f;
+        }
+        .apple-blur {
+            backdrop-filter: saturate(180%) blur(20px);
+            background-color: rgba(255, 255, 255, 0.72);
+        }
+        .prose h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-top: 3rem;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.025em;
+        }
+        .prose p {
+            font-size: 1.125rem;
+            line-height: 1.75;
+            color: #424245;
+            margin-bottom: 1.5rem;
+        }
+        .prose ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .prose li {
+            font-size: 1.125rem;
+            line-height: 1.75;
+            color: #424245;
+            margin-bottom: 0.5rem;
+        }
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background-color: #f5f5f7;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #86868b;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 w-full z-50 apple-blur border-b border-gray-200/50">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-2.5">
+                <a href="../index.html" class="flex items-center space-x-2.5 text-gray-900">
+                    <div class="w-5 h-5 bg-black rounded-[4px]"></div>
+                    <span class="font-bold text-lg tracking-tight text-black">Wait AI Lab</span>
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-600">
+                <a class="hover:text-black transition-colors" href="../index.html">Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-24">
+        <article class="max-w-[900px] mx-auto px-6 prose">
+            <!-- 1. 项目标题 -->
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">AI 工作流自动化实验</h1>
+            
+            <!-- 2. 一句话介绍 -->
+            <p class="text-xl md:text-2xl text-gray-500 font-medium mb-12">
+                将 AI 工具、自动化流程与数据系统整合，构建可执行的工作流实验。
+            </p>
+
+            <!-- 6. 页面截图区域 (Hero Image) -->
+            <div class="mb-16 rounded-3xl overflow-hidden shadow-2xl bg-gray-100 aspect-video flex items-center justify-center relative group">
+                <img alt="项目封面图" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&q=80&w=1200"/>
+                <div class="absolute inset-0 bg-black/5"></div>
+                <div class="absolute bottom-6 left-6 px-4 py-2 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold text-gray-500 shadow-sm">
+                    项目封面图 (占位)
+                </div>
+            </div>
+
+            <!-- 3. 项目背景 -->
+            <section>
+                <h2>项目背景</h2>
+                <p>
+                    很多重复性工作并不需要人从头到尾手动完成，尤其是在内容整理、运营协同、数据记录和信息流转这些场景里。我想探索的是：AI 不只是回答问题，还能不能成为流程的一部分，真正参与工作。
+                </p>
+            </section>
+
+            <!-- 4. 解决方案 -->
+            <section>
+                <h2>解决方案</h2>
+                <p>
+                    我把这个项目理解为“让 AI 接入工作流”的实验。核心思路是：
+                </p>
+                <ul>
+                    <li>梳理一个重复性任务链路</li>
+                    <li>定义 AI 在流程中的角色</li>
+                    <li>接入自动化触发机制</li>
+                    <li>输出标准化结果</li>
+                    <li>减少人工切换与重复劳动</li>
+                </ul>
+            </section>
+
+            <!-- 5. 核心功能 -->
+            <section>
+                <h2>核心功能</h2>
+                <div class="flex flex-wrap mb-6">
+                    <span class="tag">自动化任务流转</span>
+                    <span class="tag">AI 节点处理信息</span>
+                    <span class="tag">结构化输出结果</span>
+                    <span class="tag">数据同步与沉淀</span>
+                    <span class="tag">适用于运营提效和产品实验场景</span>
+                </div>
+            </section>
+
+            <!-- 6. 更多截图区域 -->
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-6 my-12">
+                <div class="rounded-2xl overflow-hidden shadow-md bg-gray-50 aspect-square flex items-center justify-center border border-gray-100 relative group">
+                    <img alt="流程图" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800"/>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md bg-gray-50 aspect-square flex items-center justify-center border border-gray-100 relative group">
+                    <img alt="工作流节点截图" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=800"/>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md bg-gray-50 aspect-video md:col-span-2 flex items-center justify-center border border-gray-100 relative group">
+                    <img alt="自动化执行结果截图" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1200"/>
+                </div>
+            </section>
+
+            <!-- 7. 技术实现 -->
+            <section>
+                <h2>技术实现</h2>
+                <div class="flex flex-wrap">
+                    <span class="tag">自动化流程设计</span>
+                    <span class="tag">AI Agent 节点逻辑</span>
+                    <span class="tag">数据表 API 集成</span>
+                    <span class="tag">工作流编排</span>
+                    <span class="tag">输出结果标准化</span>
+                </div>
+            </section>
+
+            <!-- 8. 项目收获 -->
+            <section>
+                <h2>项目收获</h2>
+                <p>
+                    这个项目让我更明确地看到：
+                </p>
+                <ul>
+                    <li>AI 最有价值的地方不只是生成内容，而是进入真实流程</li>
+                    <li>自动化系统的关键不是“酷”，而是“是否减少阻力”</li>
+                    <li>产品设计不仅是界面设计，更是流程设计</li>
+                </ul>
+            </section>
+
+            <!-- 9. 下一项目跳转 -->
+            <div class="mt-24 pt-12 border-t border-gray-100 flex justify-between items-center">
+                <a href="ai-review-analysis.html" class="group">
+                    <div class="text-sm text-gray-400 font-bold uppercase tracking-widest mb-2 text-left">Previous Project</div>
+                    <div class="text-2xl font-bold group-hover:text-blue-600 transition-colors flex items-center gap-2 justify-start">
+                        <span class="iconify" data-icon="lucide:arrow-left"></span> AI 评论分析工具
+                    </div>
+                </a>
+                <a href="../index.html" class="group text-right">
+                    <div class="text-sm text-gray-400 font-bold uppercase tracking-widest mb-2">Next</div>
+                    <div class="text-2xl font-bold group-hover:text-blue-600 transition-colors flex items-center gap-2 justify-end">
+                        返回项目列表 <span class="iconify" data-icon="lucide:arrow-right"></span>
+                    </div>
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-gray-500 text-sm">© 2026 Wait AI Lab. Designed for Clarity.</p>
+        </div>
+    </footer>
+</body>
+</html>

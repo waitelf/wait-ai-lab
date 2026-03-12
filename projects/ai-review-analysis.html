@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>AI 评论分析工具 - WeiTao AI Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #1d1d1f;
+        }
+        .apple-blur {
+            backdrop-filter: saturate(180%) blur(20px);
+            background-color: rgba(255, 255, 255, 0.72);
+        }
+        .prose h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-top: 3rem;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.025em;
+        }
+        .prose p {
+            font-size: 1.125rem;
+            line-height: 1.75;
+            color: #424245;
+            margin-bottom: 1.5rem;
+        }
+        .prose ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .prose li {
+            font-size: 1.125rem;
+            line-height: 1.75;
+            color: #424245;
+            margin-bottom: 0.5rem;
+        }
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background-color: #f5f5f7;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #86868b;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 w-full z-50 apple-blur border-b border-gray-200/50">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-2.5">
+                <a href="../index.html" class="flex items-center space-x-2.5 text-gray-900">
+                    <div class="w-5 h-5 bg-black rounded-[4px]"></div>
+                    <span class="font-bold text-lg tracking-tight text-black">Wait AI Lab</span>
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-600">
+                <a class="hover:text-black transition-colors" href="../index.html">Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-24">
+        <article class="max-w-[900px] mx-auto px-6 prose">
+            <!-- 1. 项目标题 -->
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">AI 评论分析工具</h1>
+            
+            <!-- 2. 一句话介绍 -->
+            <p class="text-xl md:text-2xl text-gray-500 font-medium mb-12">
+                尝试利用大模型分析评论与用户反馈，提取产品优化与用户需求线索。
+            </p>
+
+            <!-- 6. 页面截图区域 (Hero Image) -->
+            <div class="mb-16 rounded-3xl overflow-hidden shadow-2xl bg-gray-100 aspect-video flex items-center justify-center relative group">
+                <img alt="项目封面图" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1551288049-bbdac8a28a1e?auto=format&fit=crop&q=80&w=1200"/>
+                <div class="absolute inset-0 bg-black/5"></div>
+                <div class="absolute bottom-6 left-6 px-4 py-2 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold text-gray-500 shadow-sm">
+                    项目封面图 (占位)
+                </div>
+            </div>
+
+            <!-- 3. 项目背景 -->
+            <section>
+                <h2>项目背景</h2>
+                <p>
+                    无论是电商、内容产品还是用户社区，评论和反馈里都藏着大量真实需求。但这些内容通常分散、冗杂、难以快速归纳。所以我希望做一个 AI 评论分析工具，让评论不只是“被看见”，而是能被系统化整理成行动建议。
+                </p>
+            </section>
+
+            <!-- 4. 解决方案 -->
+            <section>
+                <h2>解决方案</h2>
+                <p>
+                    这个项目的目标是把评论数据转化为可读的洞察。整体思路是：
+                </p>
+                <ul>
+                    <li>导入评论数据</li>
+                    <li>使用大模型进行分类、情绪识别和关键词提取</li>
+                    <li>归纳用户最集中的需求与问题</li>
+                    <li>输出产品优化建议或运营洞察</li>
+                </ul>
+            </section>
+
+            <!-- 5. 核心功能 -->
+            <section>
+                <h2>核心功能</h2>
+                <div class="flex flex-wrap mb-6">
+                    <span class="tag">评论自动分类</span>
+                    <span class="tag">情绪分析</span>
+                    <span class="tag">用户需求提取</span>
+                    <span class="tag">高频问题总结</span>
+                    <span class="tag">输出可读的洞察报告</span>
+                </div>
+            </section>
+
+            <!-- 6. 更多截图区域 -->
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-6 my-12">
+                <div class="rounded-2xl overflow-hidden shadow-md bg-gray-50 aspect-square flex items-center justify-center border border-gray-100 relative group">
+                    <img alt="评论数据界面" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"/>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md bg-gray-50 aspect-square flex items-center justify-center border border-gray-100 relative group">
+                    <img alt="分析结果截图" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800"/>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md bg-gray-50 aspect-video md:col-span-2 flex items-center justify-center border border-gray-100 relative group">
+                    <img alt="总结报告截图" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"/>
+                </div>
+            </section>
+
+            <!-- 7. 技术实现 -->
+            <section>
+                <h2>技术实现</h2>
+                <div class="flex flex-wrap">
+                    <span class="tag">LLM</span>
+                    <span class="tag">Prompt Engineering</span>
+                    <span class="tag">数据清洗</span>
+                    <span class="tag">可视化模块</span>
+                    <span class="tag">自动化流程</span>
+                </div>
+            </section>
+
+            <!-- 8. 项目收获 -->
+            <section>
+                <h2>项目收获</h2>
+                <p>
+                    这个项目让我更清楚地理解了：
+                </p>
+                <ul>
+                    <li>AI 在文本分析和信息归纳上的产品价值</li>
+                    <li>一个工具要从“模型能力”走向“用户可用性”，中间还需要界面、流程和输出设计</li>
+                    <li>数据不是目的，洞察才是目的</li>
+                </ul>
+            </section>
+
+            <!-- 9. 下一项目跳转 -->
+            <div class="mt-24 pt-12 border-t border-gray-100 flex justify-between items-center">
+                <a href="ai-memory.html" class="group">
+                    <div class="text-sm text-gray-400 font-bold uppercase tracking-widest mb-2 text-left">Previous Project</div>
+                    <div class="text-2xl font-bold group-hover:text-blue-600 transition-colors flex items-center gap-2 justify-start">
+                        <span class="iconify" data-icon="lucide:arrow-left"></span> AI 个人内容记忆助手
+                    </div>
+                </a>
+                <a href="ai-workflow.html" class="group text-right">
+                    <div class="text-sm text-gray-400 font-bold uppercase tracking-widest mb-2">Next Project</div>
+                    <div class="text-2xl font-bold group-hover:text-blue-600 transition-colors flex items-center gap-2 justify-end">
+                        AI 工作流自动化实验 <span class="iconify" data-icon="lucide:arrow-right"></span>
+                    </div>
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-gray-500 text-sm">© 2026 Wait AI Lab. Designed for Clarity.</p>
+        </div>
+    </footer>
+</body>
+</html>

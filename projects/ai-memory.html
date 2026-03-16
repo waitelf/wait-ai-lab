@@ -5,11 +5,11 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>不要吃灰｜AI 个人内容记忆助手 - WeiTao AI Lab</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+    <script defer src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+    <link rel="stylesheet" href="../styles.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: #ffffff;
             color: #1d1d1f;
         }
@@ -55,21 +55,6 @@
     </style>
 </head>
 <body class="antialiased">
-    <!-- 导航栏 -->
-    <nav class="fixed top-0 w-full z-50 apple-blur border-b border-gray-200/50">
-        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-            <div class="flex items-center space-x-2.5">
-                <a href="../index.html" class="flex items-center space-x-2.5 text-gray-900">
-                    <div class="w-5 h-5 bg-black rounded-[4px]"></div>
-                    <span class="font-bold text-lg tracking-tight text-black">Wait AI Lab</span>
-                </a>
-            </div>
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-600">
-                <a class="hover:text-black transition-colors" href="../index.html">Back to Home</a>
-            </div>
-        </div>
-    </nav>
-
     <main class="pt-32 pb-24">
         <article class="max-w-[900px] mx-auto px-6 prose">
             <!-- 1. 项目标题 -->
@@ -77,87 +62,183 @@
             
             <!-- 2. 一句话介绍 -->
             <p class="text-xl md:text-2xl text-gray-500 font-medium mb-12">
-                一个帮助个人高效留存内容、自动总结并沉淀知识的 AI 助手。
+                让看过的内容，不只是被收藏，而是以后真的能用
             </p>
 
             <!-- 6. 页面截图区域 (Hero Image) -->
             <div class="mb-16 rounded-3xl overflow-hidden shadow-2xl bg-gray-100 aspect-video flex items-center justify-center relative group">
-                <img alt="项目封面图" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=1200"/>
-                <div class="absolute inset-0 bg-black/5"></div>
+                <img alt="不要吃灰｜wait-ai-lab 封面" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" decoding="async" fetchpriority="high" src="../assets/images/projects/ai-review-analysis/image.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800'"/>
             </div>
 
-            <!-- 3. 项目背景 -->
             <section>
-                <h2>项目背景</h2>
+                <h2>项目概述</h2>
                 <p>
-                    在日常聊天、阅读和信息浏览中，很多有价值的内容会快速被淹没。我希望做一个更轻量的记录方式：用户只需要把内容发送给机器人，系统就能自动理解、总结并沉淀下来，而不是让信息继续“吃灰”。
+                    “不要吃灰”是一个面向个人知识沉淀场景的内容记忆助手。我想解决的问题很简单：很多有价值的视频、观点和灵感，用户当下看过会觉得“有启发”，但几天之后就很难再找到，更难真正转化成可复用的知识。与其继续堆积收藏夹，我更想做的是，把这些内容变成以后还能调出来、看得懂、用得上的东西。
                 </p>
             </section>
 
-            <!-- 4. 解决方案 -->
             <section>
-                <h2>解决方案</h2>
+                <h2>项目缘起</h2>
                 <p>
-                    我设计了一个基于飞书群聊和自动化工作流的 AI 助手。整体流程是：
+                    这个项目最初从视频内容场景出发。我原本希望直接围绕抖音视频做自动抓取与总结，但在实际推进中很快遇到平台环境限制，难以稳定打通。之后我尝试转向 YouTube，虽然 API Key 可以接入，但搜索过程受网络环境影响，技术上依然很难顺畅落地。到这一步，我意识到问题不只是“怎么接更多平台”，而是应该先回到产品本身，判断什么才是当前阶段最值得优先跑通的核心链路。
+                </p>
+                <p>
+                    这也是这个项目里一个很重要的转折点：我没有继续困在自动抓取这件事上，而是主动调整思路，用“假定输入”替代自动输入，先验证用户价值链路是否成立。
+                </p>
+                <p>
+                    换句话说，我决定先不追求“输入一定自动化”，而是先确保“输入进来之后，内容能不能被有效处理、反馈、存储，并形成可复用的记录”。这一步看似退了一步，实际上是在主动做产品取舍。
+                </p>
+            </section>
+
+            <section>
+                <h2>我想解决的核心问题</h2>
+                <p>
+                    这个项目不是单纯做一个“内容总结器”，而是在尝试解决三个更具体的问题：
                 </p>
                 <ul>
-                    <li>用户在飞书群聊中 @机器人并发送内容</li>
-                    <li>系统通过 Webhook 接收消息</li>
-                    <li>调用大模型生成结构化总结</li>
-                    <li>将结果自动写入飞书多维表格</li>
-                    <li>完成内容留存与知识沉淀</li>
+                    <li>
+                        <strong>内容记录成本高。</strong>很多有价值的信息来自碎片场景。用户往往不会为了这类内容专门打开复杂的知识管理工具。
+                    </li>
+                    <li>
+                        <strong>收藏不等于真正沉淀。</strong>大多数内容被保存下来之后，很少被再次打开。缺少结构化处理和后续检索入口。
+                    </li>
+                    <li>
+                        <strong>知识很难进入长期可用状态。</strong>内容如果只是原样堆积，更像归档而不是知识。只有总结、归类、结构化表达并进入可管理容器，才更可能变成以后能调用的东西。
+                    </li>
+                </ul>
+                <p>
+                    基于这些判断，我把产品的第一版目标定义为：让用户通过飞书群聊输入一段内容后，系统能够自动完成总结、反馈和记录，把一次即时输入转化为一条结构化知识。
+                </p>
+            </section>
+
+            <section>
+                <h2>第一版产品目标</h2>
+                <p>
+                    为了避免一开始做得过重，我把第一版聚焦在一个非常清晰的闭环上：
+                </p>
+                <ul>
+                    <li>用户在飞书群聊中输入内容，并通过 @机器人触发流程</li>
+                    <li>系统接收消息后，调用大模型完成总结与结构化生成</li>
+                    <li>处理后的结果回到群聊，形成即时反馈</li>
+                    <li>同时同步写入飞书多维表格，便于长期保存和后续检索</li>
+                </ul>
+                <p>
+                    这个设计背后有两个考虑：一是降低输入门槛，飞书群聊本身就是高频协作场景；二是同时满足“即时感”和“可留存”，我保留了“双输出”机制：群里看得到，多维表格里也留得下。
+                </p>
+            </section>
+
+            <section>
+                <h2>关键取舍：先跑通闭环，而不是先追求完美输入</h2>
+                <p>
+                    这个项目里最能体现我思考的一点，不是技术栈本身，而是我在推进中不断做“阶段性最优”的判断。最开始我更想做“自动抓取视频内容”，但它受制于平台、网络和环境，短时间内无法成为稳定、可演示、可迭代的能力。继续在这里硬耗，项目会长期停留在输入端，反而迟迟看不到真正的产品形态。
+                </p>
+                <p>
+                    所以我做了两个关键调整：
+                </p>
+                <ul>
+                    <li><strong>把“自动抓取”降级为非必要项。</strong>它仍是未来方向，但不再作为当前版本前提。</li>
+                    <li><strong>把“手动输入 + 自动处理”确立为第一阶段主路径。</strong>只要这条路径成立，就能验证后半段价值，更快进入真实使用与反馈。</li>
+                </ul>
+                <p>
+                    一个项目未必要一开始就完整，只要先让最关键的价值流动起来，就已经具备继续优化的基础。
+                </p>
+            </section>
+
+            <section>
+                <h2>我是怎么把它做出来的</h2>
+                <p>
+                    第一版的实现思路是一个比较清晰的事件驱动流程。在技术上，我使用 FastAPI 作为服务入口，用飞书事件订阅接收群聊消息，通过 Webhook 触发 LangGraph 工作流。工作流内部负责完成内容总结、消息回复和多维表格保存，最终形成一个从输入到结构化记录的完整闭环。项目同时结合了 LangChain、大语言模型、飞书多维表格以及 cpolar 内网穿透来支撑本地调试和外部访问。
+                </p>
+                <p>
+                    如果用一句话概括这套架构，它其实是在做三件事：接住内容、处理内容、留住内容。我把工作流拆成了几个明确的节点，包括内容总结节点、飞书消息节点和飞书多维表格节点，并通过图编排去组织它们之间的顺序和执行关系。
+                </p>
+            </section>
+
+            <section>
+                <h2>技术之外，我更在意哪些决策</h2>
+                <ul>
+                    <li><strong>为什么选择 HTTP 回调，而不是 WebSocket：</strong>更简单、更可靠、更贴近飞书事件订阅的使用方式，调试成本更低，更适合快速验证阶段。</li>
+                    <li><strong>为什么选择 LangGraph：</strong>为了后续扩展。知识记录更适合做成工作流，未来加入分类、提醒、回顾、关联等能力会更有弹性。</li>
+                    <li><strong>为什么保留“双输出”：</strong>群聊回复提供即时反馈，多维表格承担沉淀与检索，组合起来更符合“内容记忆助手”的定位。</li>
+                    <li><strong>为什么优先做明文模式和本地穿透：</strong>早期更关注闭环与交互验证，因此优先选择更利于调试的方式，而不是先投入部署与加密。</li>
                 </ul>
             </section>
 
-            <!-- 5. 核心功能 -->
             <section>
-                <h2>核心功能</h2>
-                <div class="flex flex-wrap mb-6">
-                    <span class="tag">内容一键记录</span>
-                    <span class="tag">AI 自动总结</span>
-                    <span class="tag">结构化信息沉淀</span>
-                    <span class="tag">飞书多维表格自动写入</span>
-                    <span class="tag">适合个人知识管理场景</span>
-                </div>
+                <h2>项目推进过程中遇到的真实问题</h2>
+                <p>
+                    我遇到的大多数问题都出在“接入真实外部系统”这一步，比如飞书事件订阅验证失败、权限未配置、机器人未进群、消息发送但流程未触发等。这些看起来琐碎，但非常容易卡死项目。
+                </p>
+                <p>
+                    我更倾向把它们当作产品进入真实环境前必须补齐的基础条件。因为只有当消息接入、流程执行、结果返回、记录保存都在真实链路里稳定成立，这个系统才算真的活起来。
+                </p>
+                <p>
+                    最终在 2 月 9 日，我完成了“飞书群聊自动输入内容到工作流，再完成反馈与记录”的第一版闭环。
+                </p>
             </section>
 
-            <!-- 6. 更多截图区域 -->
-            <section class="grid grid-cols-1 md:grid-cols-2 gap-6 my-12">
-                <div class="rounded-2xl overflow-hidden shadow-md bg-gray-50 flex flex-col border border-gray-100 relative group">
-                    <img alt="飞书聊天界面截图" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1577563906417-45a11b3f9dd0?auto=format&fit=crop&q=80&w=800"/>
-                </div>
-                <div class="rounded-2xl overflow-hidden shadow-md bg-gray-50 flex flex-col border border-gray-100 relative group">
-                    <img alt="总结结果截图" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&q=80&w=800"/>
-                </div>
-                <div class="rounded-2xl overflow-hidden shadow-md bg-gray-50 md:col-span-2 border border-gray-100 relative group">
-                    <img alt="多维表格截图" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1551288049-bbdac8a28a1e?auto=format&fit=crop&q=80&w=1200"/>
-                </div>
+            <section>
+                <h2>第一版结果</h2>
+                <p>
+                    当前版本里，用户可以通过飞书群聊 @机器人输入内容，系统会自动调用大模型进行总结，并同步把结果输出到飞书消息和多维表格中。整个流程已可以在约 10 秒内完成，形成一个从输入到存储的可用链路。
+                </p>
+                <p>
+                    文档中记录的目标指标包括约 10 秒响应时间、95% 以上成功率以及 10+ 请求/秒的并发支持，这些更多代表当前阶段的自测结果与项目目标。
+                </p>
+                <ul>
+                    <li>飞书群聊可以成为低门槛的内容输入入口</li>
+                    <li>AI 总结 + 结构化输出能显著提升内容后续可用性</li>
+                    <li>用工作流方式组织过程，比单点功能更适合扩展</li>
+                    <li>当输入端受限时，先跑通处理与反馈闭环更合理</li>
+                </ul>
             </section>
 
-            <!-- 7. 技术实现 -->
             <section>
-                <h2>技术实现</h2>
+                <h2>这个项目让我真正学到的东西</h2>
+                <p>
+                    如果只从功能角度看，这像是一个个人知识记录工具；但从项目方法角度看，它更像一次“从想法到闭环”的练习。
+                </p>
+                <p>
+                    我更清楚地体会到：产品推进不是一味追求功能完整，而是不断判断当前阶段最值得被验证的东西是什么。不断收缩目标、重新定义问题、优先跑通核心链路，让项目变成了一个“能用、能讲、能继续迭代”的产品。
+                </p>
+                <ul>
+                    <li>从用户问题出发定义产品目标</li>
+                    <li>在受限条件下主动做功能取舍</li>
+                    <li>用工作流思路搭建可扩展系统</li>
+                    <li>在真实接入与调试中完成闭环验证</li>
+                    <li>通过文档和复盘沉淀过程，而不是停留在“做出来了”</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>如果继续做下去，我下一步会优化什么</h2>
+                <ul>
+                    <li><strong>强化输入能力：</strong>支持图片、文件等更多内容形态，而不仅仅是文本。</li>
+                    <li><strong>强化知识回用能力：</strong>不仅保存，还要能提醒、关联和检索，让“记住”变成“用起来”。</li>
+                    <li><strong>强化产品化表达：</strong>从个人使用延展到团队协作、知识图谱、对话式检索等方向。</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>项目总结</h2>
+                <p>
+                    “不要吃灰”对我来说，不只是一个飞书接入 + 大模型总结的小工具。它更像一次完整的产品练习：从问题判断、方案收缩、技术搭建，到真实闭环、阶段复盘，我第一次比较完整地把“一个想法”推进成了“一个能运行的系统”。
+                </p>
+                <p>
+                    如果要用一句话总结这个项目：我没有把注意力放在“做了多少功能”上，而是放在“如何在现实限制下，先让产品真正活起来”上。
+                </p>
+            </section>
+
+            <section>
+                <h2>技术栈</h2>
                 <div class="flex flex-wrap">
                     <span class="tag">FastAPI</span>
                     <span class="tag">LangGraph</span>
+                    <span class="tag">LangChain</span>
                     <span class="tag">Feishu Webhook</span>
-                    <span class="tag">Feishu API</span>
-                    <span class="tag">LLM</span>
+                    <span class="tag">Feishu 多维表格</span>
+                    <span class="tag">cpolar</span>
                 </div>
-            </section>
-
-            <!-- 8. 项目收获 -->
-            <section>
-                <h2>项目收获</h2>
-                <p>
-                    这个项目让我真正把“创意 → 工作流 → 产品原型”跑通了一次。我在过程中练习了：
-                </p>
-                <ul>
-                    <li>如何把一个模糊想法拆成可执行流程</li>
-                    <li>如何设计 AI Agent 的输入处理输出</li>
-                    <li>如何将自动化系统接入真实工具场景</li>
-                    <li>如何把功能做成可验证的 MVP</li>
-                </ul>
             </section>
 
             <!-- 9. 下一项目跳转 -->
@@ -174,12 +255,7 @@
             </div>
         </article>
     </main>
-
-    <!-- 页脚 -->
-    <footer class="bg-black text-white py-16">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <p class="text-gray-500 text-sm">© 2026 Wait AI Lab. Designed for Clarity.</p>
-        </div>
-    </footer>
+    <script src="../components.js"></script>
+    <script src="../script.js"></script>
 </body>
 </html>

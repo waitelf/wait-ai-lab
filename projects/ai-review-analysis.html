@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>AI 评论分析工具 - WeiTao AI Lab</title>
+    <title>从车源运营到流程自动化 - WeiTao AI Lab</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+    <script defer src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+    <link rel="stylesheet" href="../styles.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: #ffffff;
             color: #1d1d1f;
         }
@@ -55,110 +55,116 @@
     </style>
 </head>
 <body class="antialiased">
-    <!-- 导航栏 -->
-    <nav class="fixed top-0 w-full z-50 apple-blur border-b border-gray-200/50">
-        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-            <div class="flex items-center space-x-2.5">
-                <a href="../index.html" class="flex items-center space-x-2.5 text-gray-900">
-                    <div class="w-5 h-5 bg-black rounded-[4px]"></div>
-                    <span class="font-bold text-lg tracking-tight text-black">Wait AI Lab</span>
-                </a>
-            </div>
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-600">
-                <a class="hover:text-black transition-colors" href="../index.html">Back to Home</a>
-            </div>
-        </div>
-    </nav>
-
     <main class="pt-32 pb-24">
         <article class="max-w-[900px] mx-auto px-6 prose">
             <!-- 1. 项目标题 -->
-            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">AI 评论分析工具</h1>
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">从车源运营到流程自动化：一次真实业务场景的 AI 改造思考</h1>
             
             <!-- 2. 一句话介绍 -->
             <p class="text-xl md:text-2xl text-gray-500 font-medium mb-12">
-                尝试利用大模型分析评论与用户反馈，提取产品优化与用户需求线索。
+                从车源运营到流程自动化：一次真实业务场景的 AI 改造思考
             </p>
 
             <!-- 6. 页面截图区域 (Hero Image) -->
             <div class="mb-16 rounded-3xl overflow-hidden shadow-2xl bg-gray-100 aspect-video flex items-center justify-center relative group">
-                <img alt="项目封面图" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1551288049-bbdac8a28a1e?auto=format&fit=crop&q=80&w=1200"/>
-                <div class="absolute inset-0 bg-black/5"></div>
-                <div class="absolute bottom-6 left-6 px-4 py-2 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold text-gray-500 shadow-sm">
-                    项目封面图 (占位)
-                </div>
+                <img alt="自动化工作流 封面" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" decoding="async" fetchpriority="high" src="../assets/images/projects/ai-review-analysis/automation-workflow.jpeg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1517524408620-1e5364a1d8f8?auto=format&fit=crop&q=80&w=1200'"/>
             </div>
 
-            <!-- 3. 项目背景 -->
             <section>
                 <h2>项目背景</h2>
                 <p>
-                    无论是电商、内容产品还是用户社区，评论和反馈里都藏着大量真实需求。但这些内容通常分散、冗杂、难以快速归纳。所以我希望做一个 AI 评论分析工具，让评论不只是“被看见”，而是能被系统化整理成行动建议。
+                    在懂车帝的实习经历里，我接触的是二手车车源从提交到成交的一整条运营链路。表面上，我负责的是车源录入、订单跟进、数据维护和运营台账搭建；但真正让我产生兴趣的，不只是日常执行本身，而是这条业务流程里有大量重复、分散且依赖人工判断的环节。
+                </p>
+                <p>
+                    这让我开始思考：如果用 AI 和自动化工作流去重构这条链路，哪些部分最值得先做。
+                </p>
+                <p>
+                    这条链路里，前端是信息收集和商品化处理，中间是流程流转和状态管理，后端则是咨询、成交与复盘。在真实执行中我逐渐意识到，这样的流程非常适合用“工作流”的方式来理解，而不是只把它看成一组零散任务。
                 </p>
             </section>
 
-            <!-- 4. 解决方案 -->
             <section>
-                <h2>解决方案</h2>
+                <h2>我在业务中的实际工作</h2>
+                <h3>车源商品化运营</h3>
                 <p>
-                    这个项目的目标是把评论数据转化为可读的洞察。整体思路是：
+                    我负责车源在媒体店铺中的商品化处理，包括车辆信息录入、上架管理，以及根据车主心理价与平台规则制定展示价格。这部分工作本质上是在做“信息标准化”，需要把原始线索转化为平台可理解、用户可感知、后续可交易的商品信息。
+                </p>
+
+                <h3>订单流程管理</h3>
+                <p>
+                    我跟进车源订单的全流程状态，对取消订单进行原因归因与闭环管理。在执行过程中，我不仅要同步进度，也需要判断订单是在哪个节点中断、为什么中断，以及是否存在重复出现的问题模式。
+                </p>
+
+                <h3>数据维护与台账搭建</h3>
+                <p>
+                    我维护风神数据看板，校验字段口径与数据准确性，监控异常数据；同时使用飞书多维表格搭建车源运营台账，统一记录车辆上架时间、价格变化与成交状态。这让我逐渐形成一种流程化思维：很多运营问题其实并不缺数据，而是缺乏统一的记录、状态追踪和可回看的结构。
+                </p>
+            </section>
+
+            <section>
+                <h2>我在实习中发现的关键问题</h2>
+                <ul>
+                    <li>
+                        <strong>信息依赖人工补全，前置环节容易埋雷。</strong>我整理取消原因时发现，一部分取消并不是用户意愿波动，而是车辆信息不完整导致后续沟通成本增加，最终影响订单推进。
+                    </li>
+                    <li>
+                        <strong>状态记录分散，导致流程不透明。</strong>如果没有统一台账，车源上架、价格变化、成交状态往往分散在不同环节里，不利于定位问题，也不利于复盘。
+                    </li>
+                    <li>
+                        <strong>大量判断是重复性的，却仍然依赖人工处理。</strong>取消原因归因、信息是否完整判断、订单状态追踪等环节都有明显重复性。
+                    </li>
+                </ul>
+                <p>
+                    这段经历让我第一次比较直观地看到，很多业务流程之所以低效，并不是某一个人执行不到位，而是整条链路存在结构性问题。
+                </p>
+            </section>
+
+            <section>
+                <h2>这段经历给我的 AI 工作流启发</h2>
+                <p>
+                    如果把这条业务链路重新理解为一个“自动化工作流系统”，我会把它拆成四层：
                 </p>
                 <ul>
-                    <li>导入评论数据</li>
-                    <li>使用大模型进行分类、情绪识别和关键词提取</li>
-                    <li>归纳用户最集中的需求与问题</li>
-                    <li>输出产品优化建议或运营洞察</li>
+                    <li><strong>输入层：</strong>车主提交的原始线索，包括车辆基础信息、价格预期、检测结果等。关键问题是信息是否足够完整、是否符合后续流转需要。</li>
+                    <li><strong>校验与判断层：</strong>最适合引入自动化能力，比如信息缺失字段、不一致描述、需要异常提醒的订单状态、取消原因自动分类归因。</li>
+                    <li><strong>记录与同步层：</strong>让所有状态变化被及时记录，并同步到统一面板或台账中，减少人工维护与信息分散。</li>
+                    <li><strong>反馈与优化层：</strong>从结构化数据中反向提取运营洞察，帮助优化流程，而不只是“把流程跑完”。</li>
                 </ul>
             </section>
 
-            <!-- 5. 核心功能 -->
             <section>
-                <h2>核心功能</h2>
-                <div class="flex flex-wrap mb-6">
-                    <span class="tag">评论自动分类</span>
-                    <span class="tag">情绪分析</span>
-                    <span class="tag">用户需求提取</span>
-                    <span class="tag">高频问题总结</span>
-                    <span class="tag">输出可读的洞察报告</span>
-                </div>
-            </section>
-
-            <!-- 6. 更多截图区域 -->
-            <section class="grid grid-cols-1 md:grid-cols-2 gap-6 my-12">
-                <div class="rounded-2xl overflow-hidden shadow-md bg-gray-50 aspect-square flex items-center justify-center border border-gray-100 relative group">
-                    <img alt="评论数据界面" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"/>
-                </div>
-                <div class="rounded-2xl overflow-hidden shadow-md bg-gray-50 aspect-square flex items-center justify-center border border-gray-100 relative group">
-                    <img alt="分析结果截图" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800"/>
-                </div>
-                <div class="rounded-2xl overflow-hidden shadow-md bg-gray-50 aspect-video md:col-span-2 flex items-center justify-center border border-gray-100 relative group">
-                    <img alt="总结报告截图" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1200"/>
-                </div>
-            </section>
-
-            <!-- 7. 技术实现 -->
-            <section>
-                <h2>技术实现</h2>
-                <div class="flex flex-wrap">
-                    <span class="tag">LLM</span>
-                    <span class="tag">Prompt Engineering</span>
-                    <span class="tag">数据清洗</span>
-                    <span class="tag">可视化模块</span>
-                    <span class="tag">自动化流程</span>
-                </div>
-            </section>
-
-            <!-- 8. 项目收获 -->
-            <section>
-                <h2>项目收获</h2>
+                <h2>如果把它做成一个 AI 自动化项目，我会怎么定义</h2>
                 <p>
-                    这个项目让我更清楚地理解了：
+                    我会把这个项目理解为：面向二手车线索流转场景的运营自动化工作流探索。它的目标不是简单“用 AI 替代人工”，而是针对真实业务中的重复判断、信息缺失和状态同步问题，设计一套更高效的流程机制。
+                </p>
+                <p>
+                    如果继续往产品化方向推进，我会优先设计这几个能力：
                 </p>
                 <ul>
-                    <li>AI 在文本分析和信息归纳上的产品价值</li>
-                    <li>一个工具要从“模型能力”走向“用户可用性”，中间还需要界面、流程和输出设计</li>
-                    <li>数据不是目的，洞察才是目的</li>
+                    <li><strong>车源信息完整性自动校验：</strong>在车辆录入环节对缺失字段、异常信息、描述不完整情况进行自动提醒，把问题前置处理。</li>
+                    <li><strong>取消订单原因自动归类：</strong>结合取消原因、沟通记录与状态节点，通过规则或模型自动分类，帮助运营识别高频问题。</li>
+                    <li><strong>车源状态自动同步与台账更新：</strong>把上架、价格变化、咨询进展、成交状态自动同步到统一台账或看板中。</li>
+                    <li><strong>异常节点预警与流程提示：</strong>对长时间未推进、信息不完整或高风险流失的订单自动触发提示，让运营从被动跟进转向主动干预。</li>
                 </ul>
+            </section>
+
+            <section>
+                <h2>这段经历让我真正学到的东西</h2>
+                <p>
+                    这段实习对我来说，不只是一次运营实践，更像是一次真实业务流程拆解训练。我开始意识到，AI 自动化工作流完全可以从最真实、最具体的业务环节中生长出来。
+                </p>
+                <ul>
+                    <li>从业务流程中识别可被自动化改造的节点</li>
+                    <li>把运营问题翻译成信息流、状态流和判断流的问题</li>
+                    <li>用工作流视角，而不是单点任务视角理解业务优化</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>一句话总结</h2>
+                <p>
+                    这段经历让我第一次从真实运营场景出发，去思考如何把重复判断、状态同步和异常归因，重构成可被 AI 与自动化工作流优化的业务链路。
+                </p>
             </section>
 
             <!-- 9. 下一项目跳转 -->
@@ -178,12 +184,7 @@
             </div>
         </article>
     </main>
-
-    <!-- 页脚 -->
-    <footer class="bg-black text-white py-16">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <p class="text-gray-500 text-sm">© 2026 Wait AI Lab. Designed for Clarity.</p>
-        </div>
-    </footer>
+    <script src="../components.js"></script>
+    <script src="../script.js"></script>
 </body>
 </html>

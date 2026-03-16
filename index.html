@@ -6,318 +6,592 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>个人作品集 | AI Product &amp; Automation</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
-<style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #fbfbfd;
-            color: #1d1d1f;
-        }
-        .apple-blur {
-            backdrop-filter: saturate(180%) blur(20px);
-            background-color: rgba(255, 255, 255, 0.72);
-        }
-        .card-hover {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-        }
-        .linear-gradient-text {
-            background: linear-gradient(180deg, #1d1d1f 0%, #434343 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    </style>
+<script defer src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="styles.css">
 </head>
-<body class="antialiased">
-<!-- 1. 导航栏 -->
-<nav class="fixed top-0 w-full z-50 apple-blur border-b border-gray-200/50">
-<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-<div class="flex items-center space-x-2.5">
-<div class="w-5 h-5 bg-black rounded-[4px]"></div>
-<span class="font-bold text-lg tracking-tight text-black">Wait AI Lab</span>
-</div>
-<div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-600">
-<a class="hover:text-black transition-colors" href="#home">Home</a> 
- <a class="hover:text-black transition-colors" href="#ai-projects">AI Projects</a> 
- <a class="hover:text-black transition-colors" href="#growth-projects">Growth Projects</a> 
- <a class="hover:text-black transition-colors" href="#insights">Insights</a> 
- <a class="hover:text-black transition-colors" href="#about">About</a>
-</div>
-<div class="md:hidden">
-<span class="iconify text-2xl" data-icon="lucide:menu"></span>
-</div>
-</div>
-</nav>
+<body class="antialiased selection:bg-black selection:text-white">
 <main class="pt-16">
 <!-- 2. Hero首屏区域 -->
-<section class="max-w-7xl mx-auto px-6 pt-20 md:pt-32 pb-20" id="home">
-<div class="flex flex-col md:flex-row items-center gap-12">
-<div class="flex-1 space-y-8">
-<div class="space-y-4">
-<div class="inline-block px-3 py-1 bg-gray-100 rounded-full text-xs font-semibold uppercase tracking-wider text-gray-500">
-                            AVAILABLE FOR AI & GROWTH PROJECTS
-                        </div>
-<h1 class="text-4xl md:text-6xl font-bold leading-[1.1] tracking-tight linear-gradient-text text-left">
-                            AI时代<br/>让创意不再只是幻想
+<section class="max-w-7xl mx-auto px-6 pt-24 md:pt-40 pb-24" id="home">
+<div class="flex flex-col md:flex-row items-center gap-16 md:gap-24">
+<div class="flex-1 space-y-10">
+<div class="space-y-6">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 bg-white border border-gray-200/60 rounded-full text-[12px] font-semibold tracking-tight text-gray-500 shadow-sm">
+<span class="font-bold text-gray-900">AI Product / AI Operations Candidate</span>
+<span class="opacity-60">·</span>
+<span>增长实战 × AI 原型 × 自动化</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight text-balance text-gray-900 split-parent js-split" data-split="chars">
+                            把想法做出来把结果跑出来
                         </h1>
-                        <p class="text-xl md:text-2xl text-gray-500 font-medium pt-2">
-                            AI Ideas · Automation · Experiments
-                        </p>
-<p class="text-gray-600 leading-relaxed max-w-xl text-lg">
-                            我用 AI 与自动化工具快速验证创意想法，<br/>把灵感变成真实可用的产品与工具，<br/>同时把增长方法落到真实场景。
+<p class="text-gray-600 leading-relaxed max-w-xl text-lg md:text-xl font-light split-parent js-split" data-split="chars">
+                            用户增长、活动运营和数据分析经验、校园流量、AI开发<br/>做时代的乘风者，我一直在路上
                         </p>
 </div>
-<div class="flex flex-wrap gap-4 pt-4">
-<a class="px-8 py-4 bg-black text-white rounded-full font-semibold hover:bg-gray-800 transition-all transform hover:scale-105 shadow-lg" href="#ai-projects">
-                            查看项目
-                        </a>
-<a class="px-8 py-4 bg-white border border-gray-200 rounded-full font-semibold hover:bg-gray-50 transition-all flex items-center gap-2" href="#insights">
-                            阅读文章 <span class="iconify" data-icon="lucide:arrow-right"></span>
+<div class="flex flex-wrap gap-4 pt-2">
+<a class="px-8 py-4 bg-blue-600 text-white rounded-2xl font-semibold hover:bg-blue-500 transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-xl hover:shadow-2xl flex items-center gap-2 group" href="#ai-projects">
+                            看代表项目 <span class="iconify transition-transform group-hover:translate-x-1" data-icon="lucide:arrow-right"></span>
 </a>
+<a class="px-8 py-4 bg-white border border-gray-200 rounded-2xl font-semibold hover:bg-gray-50 hover:border-gray-300 transition-all flex items-center gap-2" href="./assets/Resume.pdf" download>
+                            下载简历 <span class="iconify" data-icon="lucide:download"></span>
+</a>
+<a class="px-2 py-4 font-semibold text-gray-500 hover:text-black transition-colors flex items-center gap-2" href="mailto:WaiTao1229@163.com">
+                            联系我 <span class="iconify" data-icon="lucide:mail"></span>
+</a>
+</div>
+<div class="pt-4">
+<div class="inline-flex flex-wrap gap-2 text-sm">
+<span class="px-3 py-2 rounded-full bg-white border border-gray-200/60 text-gray-600">0→5000 用户增长</span>
+<span class="px-3 py-2 rounded-full bg-white border border-gray-200/60 text-gray-600">月留存 65%+</span>
+<span class="px-3 py-2 rounded-full bg-white border border-gray-200/60 text-gray-600">25万+ 转化</span>
+<span class="px-3 py-2 rounded-full bg-white border border-gray-200/60 text-gray-600">月活 58%→72%</span>
+</div>
 </div>
 </div>
 <div class="flex-1 w-full">
-<div class="group w-full overflow-hidden rounded-3xl shadow-lg">
-<img alt="AI-powered creative workspace" class="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105" src="https://showcase.nano-banana.ai/ai_generator/ca7d3d76-6b8a-4ed2-bf31-447c523f7ffe/image_to_image/generated/20260310_083734_kie_nano-banana-2-edit_7c62c0e4-3d2e-4364-9429-3ad986c63d97_0.png"/>
+<div class="hero-visual group w-full aspect-square md:aspect-[4/3] overflow-hidden rounded-[2.5rem] shadow-none border-0 relative">
+<div class="hero-visual__atmo"></div>
+
+<div class="hero-cardstage" aria-label="AI Lab Digital ID Card">
+<div class="aib-card" aria-label="AIBuilderIDCard">
+<div class="aib-card__top">
+<div class="aib-card__label"><span class="aib-card__dot"></span>AI LAB ID</div>
+<div class="aib-card__code">AIBUILDER</div>
 </div>
+<div class="aib-card__content">
+<div class="aib-card__left">
+<div class="aib-card__avatar">
+<img alt="Wei Tao" decoding="async" fetchpriority="high" src="assets/images/portrait.jpg"/>
+</div>
+<div class="aib-card__name">Wei Tao</div>
+<div class="aib-card__role">AI Product / Automation</div>
+</div>
+<div class="aib-card__right">
+<div class="aib-card__skills" aria-label="技能标签">
+<span class="aib-chip">AI Workflow</span>
+<span class="aib-chip">Automation</span>
+<span class="aib-chip">Product Thinking</span>
+<span class="aib-chip">Growth Ops</span>
+<span class="aib-chip">Data Analysis</span>
+</div>
+<div class="aib-card__status" aria-label="状态">
+<div class="aib-row"><span class="aib-k">Status</span><span class="aib-v">Active</span></div>
+<div class="aib-row"><span class="aib-k">Focus</span><span class="aib-v">AI Systems</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="hero-workspace hidden" aria-label="AI Builder Workspace">
+<div class="hero-workspace__panel">
+<div class="hero-workspace__chrome">
+<span class="hero-workspace__dot hero-workspace__dot--r"></span>
+<span class="hero-workspace__dot hero-workspace__dot--y"></span>
+<span class="hero-workspace__dot hero-workspace__dot--g"></span>
+<div class="hero-workspace__title">AI BUILDER WORKSPACE</div>
+</div>
+
+<div class="hero-workspace__body">
+<div class="hero-workflow" aria-label="AI Workflow System Panel">
+<div class="hero-workflow__grid">
+<div class="hero-node hero-node--blue">
+<div class="hero-node__k">INPUT</div>
+<div class="hero-node__v">Business Signals</div>
+</div>
+<div class="hero-node hero-node--violet">
+<div class="hero-node__k">AUTOMATE</div>
+<div class="hero-node__v">Workflow Nodes</div>
+</div>
+<div class="hero-node hero-node--cyan">
+<div class="hero-node__k">SYNC</div>
+<div class="hero-node__v">Ledger &amp; Status</div>
+</div>
+<div class="hero-node hero-node--dark">
+<div class="hero-node__k">OUTPUT</div>
+<div class="hero-node__v">Structured Record</div>
+</div>
+</div>
+
+<div class="hero-workflow__rail" aria-label="Workflow Path">
+<span class="hero-workflow__n">1</span>
+<div class="hero-workflow__l"></div>
+<span class="hero-workflow__n">2</span>
+<div class="hero-workflow__l"></div>
+<span class="hero-workflow__n">3</span>
+<div class="hero-workflow__l"></div>
+<span class="hero-workflow__n">4</span>
+</div>
+
+<div class="hero-data" aria-label="Data Module">
+<div class="hero-data__k">DATA</div>
+<div class="hero-data__row"><span>Sync</span><span class="hero-data__val">99.2%</span></div>
+<div class="hero-data__row"><span>Latency</span><span class="hero-data__val">~10s</span></div>
+<div class="hero-data__row"><span>Mode</span><span class="hero-data__val">Human-in-loop</span></div>
+</div>
+</div>
+
+<div class="aib-card" aria-label="AIBuilderIDCard">
+<div class="aib-card__top">
+<div class="aib-card__label"><span class="aib-card__dot"></span>AI LAB ID</div>
+<div class="aib-card__code">AIBUILDER</div>
+</div>
+<div class="aib-card__slot"></div>
+<div class="aib-card__avatar">
+<img alt="Wei Tao" decoding="async" fetchpriority="high" src="assets/images/portrait.jpg"/>
+</div>
+<div class="aib-card__name">Wei Tao</div>
+<div class="aib-card__role">AI Product / Automation</div>
+<div class="aib-card__skills" aria-label="技能标签">
+<span class="aib-chip">AI Workflow</span>
+<span class="aib-chip">Automation</span>
+<span class="aib-chip">Product Thinking</span>
+<span class="aib-chip">Growth Ops</span>
+<span class="aib-chip">Data Analysis</span>
+</div>
+<div class="aib-card__status" aria-label="状态">
+<div class="aib-row"><span class="aib-k">Status</span><span class="aib-v">Active</span></div>
+<div class="aib-row"><span class="aib-k">Focus</span><span class="aib-v">AI Systems</span></div>
+</div>
+</div>
+
+<div class="hero-workspace__float hero-workspace__float--a"></div>
+<div class="hero-workspace__float hero-workspace__float--b"></div>
+</div>
+</div>
+</div>
+
+<div class="hero-window hidden" aria-label="AI Lab Interface">
+<div class="hero-window__chrome">
+<span class="hero-window__dot hero-window__dot--r"></span>
+<span class="hero-window__dot hero-window__dot--y"></span>
+<span class="hero-window__dot hero-window__dot--g"></span>
+<div class="hero-window__title">AI LAB / WORKFLOW UI</div>
+</div>
+
+<div class="hero-window__body">
+<div class="hero-window__sidebar">
+<div class="hero-side">
+<div class="hero-side__k">MODULES</div>
+<div class="hero-side__item"><span class="hero-side__dot"></span>Incoming Signals</div>
+<div class="hero-side__item"><span class="hero-side__dot"></span>Workflow Nodes</div>
+<div class="hero-side__item"><span class="hero-side__dot"></span>Status Sync</div>
+<div class="hero-side__item"><span class="hero-side__dot"></span>Ledger Output</div>
+</div>
+
+<div class="hero-side hero-side--muted">
+<div class="hero-side__k">RUN</div>
+<div class="hero-side__item"><span class="hero-side__dot hero-side__dot--cyan"></span>Active</div>
+<div class="hero-side__item"><span class="hero-side__dot"></span>Low-latency UI</div>
+<div class="hero-side__item"><span class="hero-side__dot"></span>Human-in-loop</div>
+</div>
+</div>
+
+<div class="hero-window__grid">
+<div class="hero-modules" aria-label="Workflow Modules">
+<div class="hero-card hero-card--blue">
+<div class="hero-card__t">INPUT</div>
+<div class="hero-card__d">Business Signals</div>
+</div>
+<div class="hero-card hero-card--violet">
+<div class="hero-card__t">VALIDATE</div>
+<div class="hero-card__d">AI Checks</div>
+</div>
+<div class="hero-card hero-card--cyan">
+<div class="hero-card__t">SYNC</div>
+<div class="hero-card__d">Ledger & Status</div>
+</div>
+<div class="hero-card hero-card--dark">
+<div class="hero-card__t">OUTPUT</div>
+<div class="hero-card__d">Structured Record</div>
+</div>
+
+<div class="hero-flow" aria-label="Workflow Path">
+<span class="hero-flow__n">1</span>
+<div class="hero-flow__l"></div>
+<span class="hero-flow__n">2</span>
+<div class="hero-flow__l"></div>
+<span class="hero-flow__n">3</span>
+<div class="hero-flow__l"></div>
+<span class="hero-flow__n">4</span>
+</div>
+</div>
+
+<div class="aib-id" aria-label="AI Lab Digital ID">
+<div class="aib-id__top">
+<div class="aib-id__label"><span class="aib-id__label-dot"></span>AI LAB ID</div>
+<div class="aib-id__code">AIBUILDER</div>
+</div>
+<div class="aib-id__avatar">
+<img alt="Wei Tao" decoding="async" fetchpriority="high" src="assets/images/portrait.jpg"/>
+</div>
+<div class="aib-id__name">Wei Tao</div>
+<div class="aib-id__role">AI Product / Automation</div>
+<div class="aib-id__skills" aria-label="技能标签">
+<span class="aib-chip">AI Workflow</span>
+<span class="aib-chip">Automation</span>
+<span class="aib-chip">Product Thinking</span>
+<span class="aib-chip">Growth Ops</span>
+<span class="aib-chip">Data Analysis</span>
+</div>
+<div class="aib-id__status">
+<div class="aib-row"><span class="aib-k">Status</span><span class="aib-v">Active</span></div>
+<div class="aib-row"><span class="aib-k">Focus</span><span class="aib-v">AI Systems</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
 </div>
 </div>
 </section>
 <!-- 3. What I Build 模块 -->
-<section class="max-w-7xl mx-auto px-6" style="padding-top: 40px; padding-bottom: 120px;">
-    <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-3">What I Build</h2>
-        <p class="text-lg text-gray-500">AI 创意实验与增长实践并行推进</p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- 左侧卡片: AI Experiments -->
-        <div class="bg-white p-8 rounded-3xl border border-gray-200/80 shadow-lg card-hover h-full flex flex-col">
-            <h3 class="text-2xl font-bold mb-4">AI Experiments</h3>
-            <p class="text-gray-600 leading-relaxed mb-6 flex-grow">
+<section class="max-w-7xl mx-auto px-6 py-24 md:py-32">
+<div class="mb-20">
+<h2 class="text-4xl md:text-6xl font-bold tracking-tight mb-6">What I Build</h2>
+<p class="text-xl text-gray-500 max-w-2xl font-light">AI 创意实验与增长实践并行推进，探索技术与商业的边界。</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+<!-- 左侧卡片: AI Experiments -->
+<div class="bg-white p-10 md:p-12 rounded-[2.5rem] border border-gray-100 shadow-[0_8px_30px_rgba(0,0,0,0.04)] card-hover h-full flex flex-col group">
+<div class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+<span class="iconify text-2xl text-blue-600" data-icon="lucide:flask-conical"></span>
+</div>
+<h3 class="text-3xl font-bold mb-4 tracking-tight">AI Experiments</h3>
+<p class="text-gray-600 leading-relaxed mb-10 flex-grow text-lg">
                 我用 AI 与自动化工具快速验证创意想法，把灵感转化为真实可用的产品与工具。
             </p>
-            <ul class="space-y-3 text-gray-800">
-                <li class="flex items-center gap-3">
-                    <span class="iconify text-blue-500" data-icon="lucide:cpu"></span>
-                    <span class="font-medium">AI Product Experiments</span>
+<ul class="space-y-4 text-gray-700 font-medium">
+<li class="flex items-center gap-4 p-4 bg-gray-50/50 rounded-2xl border border-gray-100/50">
+<span class="iconify text-blue-500 text-xl" data-icon="lucide:cpu"></span>
+                    AI Product Experiments
                 </li>
-                <li class="flex items-center gap-3">
-                    <span class="iconify text-blue-500" data-icon="lucide:bot"></span>
-                    <span class="font-medium">Automation Workflows</span>
+<li class="flex items-center gap-4 p-4 bg-gray-50/50 rounded-2xl border border-gray-100/50">
+<span class="iconify text-blue-500 text-xl" data-icon="lucide:bot"></span>
+                    Automation Workflows
                 </li>
-                <li class="flex items-center gap-3">
-                    <span class="iconify text-blue-500" data-icon="lucide:lightbulb"></span>
-                    <span class="font-medium">Idea → Prototype</span>
+<li class="flex items-center gap-4 p-4 bg-gray-50/50 rounded-2xl border border-gray-100/50">
+<span class="iconify text-blue-500 text-xl" data-icon="lucide:lightbulb"></span>
+                    Idea → Prototype
                 </li>
-            </ul>
-        </div>
-        <!-- 右侧卡片: Growth Practice -->
-        <div class="bg-white p-8 rounded-3xl border border-gray-200/80 shadow-lg card-hover h-full flex flex-col">
-            <h3 class="text-2xl font-bold mb-4">Growth Practice</h3>
-            <p class="text-gray-600 leading-relaxed mb-6 flex-grow">
+</ul>
+</div>
+<!-- 右侧卡片: Growth Practice -->
+<div class="bg-white p-10 md:p-12 rounded-[2.5rem] border border-gray-100 shadow-[0_8px_30px_rgba(0,0,0,0.04)] card-hover h-full flex flex-col group">
+<div class="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+<span class="iconify text-2xl text-green-600" data-icon="lucide:trending-up"></span>
+</div>
+<h3 class="text-3xl font-bold mb-4 tracking-tight">Growth Practice</h3>
+<p class="text-gray-600 leading-relaxed mb-10 flex-grow text-lg">
                 我在真实运营场景中积累用户增长、活动执行与数据优化经验，关注从产品到用户的连接效率。
             </p>
-            <ul class="space-y-3 text-gray-800">
-                <li class="flex items-center gap-3">
-                    <span class="iconify text-green-500" data-icon="lucide:users"></span>
-                    <span class="font-medium">User Growth</span>
+<ul class="space-y-4 text-gray-700 font-medium">
+<li class="flex items-center gap-4 p-4 bg-gray-50/50 rounded-2xl border border-gray-100/50">
+<span class="iconify text-green-500 text-xl" data-icon="lucide:users"></span>
+                    User Growth
                 </li>
-                <li class="flex items-center gap-3">
-                    <span class="iconify text-green-500" data-icon="lucide:megaphone"></span>
-                    <span class="font-medium">Campaign Operations</span>
+<li class="flex items-center gap-4 p-4 bg-gray-50/50 rounded-2xl border border-gray-100/50">
+<span class="iconify text-green-500 text-xl" data-icon="lucide:megaphone"></span>
+                    Campaign Operations
                 </li>
-                <li class="flex items-center gap-3">
-                    <span class="iconify text-green-500" data-icon="lucide:bar-chart-2"></span>
-                    <span class="font-medium">Data-driven Optimization</span>
+<li class="flex items-center gap-4 p-4 bg-gray-50/50 rounded-2xl border border-gray-100/50">
+<span class="iconify text-green-500 text-xl" data-icon="lucide:bar-chart-2"></span>
+                    Data-driven Optimization
                 </li>
-            </ul>
-        </div>
-    </div>
+</ul>
+</div>
+</div>
 </section>
 <!-- 4. About 模块 -->
-<section class="max-w-7xl mx-auto px-6 py-16" id="about">
-<h2 class="text-4xl font-bold mb-12 tracking-tight">About</h2>
-<p class="text-xl text-gray-800 font-medium mb-12">我是一名正在向 AI 产品与自动化方向迁移的增长实践者。</p>
-<div class="grid md:grid-cols-3 gap-8">
+<section class="max-w-7xl mx-auto px-6 py-24 border-t border-gray-100" id="about">
+<div class="flex flex-col md:flex-row justify-between items-start mb-16 gap-8">
+<h2 class="text-4xl md:text-5xl font-bold tracking-tight">About Me</h2>
+<p class="text-xl text-gray-500 font-light max-w-xl text-right md:text-left">我是一名正在向 AI 产品与自动化方向迁移的增长实践者。</p>
+</div>
+<div class="grid md:grid-cols-3 gap-6 md:gap-8">
 <!-- 背景 -->
-<div class="bg-white p-10 rounded-[2.5rem] border border-gray-100 card-hover flex flex-col justify-between h-full">
-<div class="space-y-4">
-<span class="iconify text-4xl text-blue-600" data-icon="lucide:history"></span>
-<h3 class="text-2xl font-bold">成长背景</h3>
+<div class="bg-white p-8 md:p-10 rounded-[2rem] border border-gray-100 card-hover flex flex-col justify-between h-full shadow-sm">
+<div class="space-y-6">
+<div class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center">
+<span class="iconify text-2xl text-blue-600" data-icon="lucide:history"></span>
+</div>
+<div>
+<h3 class="text-2xl font-bold mb-3">成长背景</h3>
 <p class="text-gray-500 leading-relaxed">
                             审计学本科在读，具备数据分析与结构化思维基础。曾在校园品牌运营、电商运营与市场增长实践中积累一线经验。
                         </p>
 </div>
 </div>
+</div>
 <!-- 核心能力 -->
-<div class="bg-white p-10 rounded-[2.5rem] border border-gray-100 card-hover flex flex-col justify-between h-full">
-<div class="space-y-4">
-<span class="iconify text-4xl text-purple-600" data-icon="lucide:zap"></span>
-<h3 class="text-2xl font-bold">核心能力</h3>
-<ul class="text-gray-500 space-y-2">
-                            <li>• AI应用与自动化工作流</li>
-                            <li>• 用户增长与社群运营</li>
-                            <li>• 数据分析与复盘优化</li>
-                            <li>• 产品需求洞察</li>
-                        </ul>
+<div class="bg-white p-8 md:p-10 rounded-[2rem] border border-gray-100 card-hover flex flex-col justify-between h-full shadow-sm">
+<div class="space-y-6">
+<div class="w-12 h-12 bg-purple-50 rounded-2xl flex items-center justify-center">
+<span class="iconify text-2xl text-purple-600" data-icon="lucide:zap"></span>
+</div>
+<div>
+<h3 class="text-2xl font-bold mb-3">核心能力</h3>
+<ul class="text-gray-500 space-y-2 font-medium">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>AI应用与自动化工作流</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>用户增长与社群运营</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>数据分析与复盘优化</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>产品需求洞察</li>
+</ul>
+</div>
 </div>
 </div>
 <!-- 当前方向 -->
-<div class="bg-white p-10 rounded-[2.5rem] border border-gray-100 card-hover flex flex-col justify-between h-full">
-<div class="space-y-4">
-<span class="iconify text-4xl text-emerald-600" data-icon="lucide:target"></span>
-<h3 class="text-2xl font-bold">当前方向</h3>
-<ul class="text-gray-500 space-y-2">
-                            <li>• AI Product</li>
-                            <li>• AI 电商</li>
-                            <li>• 自动化工具</li>
-                            <li>• 增长运营</li>
-                        </ul>
+<div class="bg-white p-8 md:p-10 rounded-[2rem] border border-gray-100 card-hover flex flex-col justify-between h-full shadow-sm">
+<div class="space-y-6">
+<div class="w-12 h-12 bg-emerald-50 rounded-2xl flex items-center justify-center">
+<span class="iconify text-2xl text-emerald-600" data-icon="lucide:target"></span>
+</div>
+<div>
+<h3 class="text-2xl font-bold mb-3">当前方向</h3>
+<ul class="text-gray-500 space-y-2 font-medium">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>AI Product</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>AI 电商</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>自动化工具</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>增长运营</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class="mo reveal">
+<div class="mo__head">
+<div class="mo__badge">
+<span class="mo__badge-dot"></span>
+<span class="mo__badge-text">Moving Online</span>
+</div>
+<h3 class="mo__title">Moving Online</h3>
+<p class="mo__subtitle">从线下增长实践，到 AI 原型与产品化探索。</p>
+<p class="mo__path">Offline Growth → Digital Workflow → AI Product</p>
+</div>
+
+<div class="mo__track">
+<div class="mo__item" style="--i: 0">
+<div class="mo__rail">
+<div class="mo__node mo__node--past">
+<span class="mo__node-core"></span>
+</div>
+</div>
+<div class="mo__panel">
+<div class="mo__meta">2023</div>
+<div class="mo__panel-title">从校园运营开始理解用户与增长</div>
+<div class="mo__panel-desc">从市场活动、用户触达和转化跟进做起，在真实场景里积累对用户需求、传播效率和执行节奏的理解，也第一次建立起对“增长结果”这件事的敏感度。</div>
+<div class="mo__tags" aria-label="标签">
+<span class="mo__tag">User Growth</span>
+<span class="mo__tag">Campaign</span>
+<span class="mo__tag">Conversion</span>
+</div>
+</div>
+</div>
+
+<div class="mo__item" style="--i: 1">
+<div class="mo__rail">
+<div class="mo__node mo__node--shift">
+<span class="mo__node-core"></span>
+</div>
+</div>
+<div class="mo__panel">
+<div class="mo__meta">2023 · 2024</div>
+<div class="mo__panel-title">从执行走向优化，开始用数据看问题</div>
+<div class="mo__panel-desc">在校园平台和校园网运营实践中，逐渐不再只关注活动有没有做完，而开始关注留存、活跃、转化和反馈，尝试从数据和流程里寻找更优解。</div>
+<div class="mo__tags" aria-label="标签">
+<span class="mo__tag">Retention</span>
+<span class="mo__tag">Optimization</span>
+<span class="mo__tag">Data Thinking</span>
+</div>
+</div>
+</div>
+
+<div class="mo__item" style="--i: 2">
+<div class="mo__rail">
+<div class="mo__node mo__node--build">
+<span class="mo__node-core"></span>
+</div>
+</div>
+<div class="mo__panel">
+<div class="mo__meta">2024 · 2025</div>
+<div class="mo__panel-title">开始把想法做成原型，进入 AI 搭建阶段</div>
+<div class="mo__panel-desc">独立完成 AI 内容记忆助手、自动化实验和个人网站搭建，把原本停留在想法层的东西，推进成可以运行、可以展示、可以验证的线上原型。</div>
+<div class="mo__tags" aria-label="标签">
+<span class="mo__tag">AI Prototype</span>
+<span class="mo__tag">Workflow</span>
+<span class="mo__tag">Building</span>
+</div>
+</div>
+</div>
+
+<div class="mo__item" style="--i: 3">
+<div class="mo__rail">
+<div class="mo__node mo__node--now">
+<span class="mo__node-core"></span>
+</div>
+</div>
+<div class="mo__panel mo__panel--now">
+<div class="mo__meta">Now</div>
+<div class="mo__panel-title">继续向 AI 产品与 AI 运营方向迭代</div>
+<div class="mo__panel-desc">正在把增长经验、自动化能力和产品意识进一步整合，希望在真实业务场景中，把 AI 做成更可用、更可验证的产品与流程。</div>
+<div class="mo__tags" aria-label="标签">
+<span class="mo__tag">AI Product</span>
+<span class="mo__tag">AI Ops</span>
+<span class="mo__tag">Iteration</span>
+</div>
+</div>
 </div>
 </div>
 </div>
 </section>
 <!-- 5. AI Projects 模块 -->
-<section class="bg-gray-50 py-16" id="ai-projects">
+<section class="bg-gray-50/50 py-24 border-y border-gray-100" id="ai-projects">
 <div class="max-w-7xl mx-auto px-6">
-<div class="flex justify-between items-end mb-12">
-<h2 class="text-4xl font-bold tracking-tight">AI Projects</h2>
-<p class="text-gray-500 font-medium">AI 产品实验与自动化工具探索</p>
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-4">
+<div>
+<h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-2">AI Projects</h2>
+<p class="text-xl text-gray-500 font-light">AI 产品实验与自动化工具探索</p>
 </div>
-<div class="grid md:grid-cols-3 gap-8">
+<a href="#" class="hidden md:flex items-center gap-2 text-sm font-bold border-b border-black pb-1 hover:text-gray-600 hover:border-gray-600 transition-all">
+                VIEW ALL PROJECTS <span class="iconify" data-icon="lucide:arrow-right"></span>
+</a>
+</div>
+<div class="grid md:grid-cols-3 gap-8 md:gap-10">
 <!-- 项目 1 -->
-<div class="bg-white rounded-[2rem] overflow-hidden border border-gray-100 card-hover group shadow-sm">
+<div class="bg-white rounded-[2.5rem] overflow-hidden border border-gray-100 card-hover group shadow-sm flex flex-col">
 <div class="aspect-video bg-[#f8f9fb] flex items-center justify-center relative overflow-hidden">
-<img alt="AI个人内容记忆助手 Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800"/>
-<div class="absolute inset-0 bg-black/5"></div>
+<img alt="不要吃灰｜wait-ai-lab 封面" class="w-full h-full object-cover object-top transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105" decoding="async" loading="lazy" src="assets/images/projects/ai-review-analysis/image.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800'"/>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500"></div>
 </div>
-<div class="p-8">
-<div class="flex gap-2 mb-4">
-<span class="px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold rounded-full uppercase">FastAPI</span>
-<span class="px-3 py-1 bg-gray-100 text-gray-500 text-[10px] font-bold rounded-full uppercase">LangGraph</span>
+<div class="p-8 md:p-10 flex flex-col flex-grow">
+<div class="flex gap-2 mb-6">
+<span class="px-3 py-1 bg-blue-50 text-blue-600 text-[11px] font-bold rounded-full uppercase tracking-wide">FastAPI</span>
+<span class="px-3 py-1 bg-gray-100 text-gray-500 text-[11px] font-bold rounded-full uppercase tracking-wide">LangGraph</span>
 </div>
-<h3 class="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors">不要吃灰｜AI个人内容记忆助手</h3>
-<p class="text-gray-500 text-sm leading-relaxed mb-6">
+<h3 class="text-2xl font-bold mb-3 group-hover:text-blue-600 transition-colors tracking-tight">AI个人内容记忆助手</h3>
+<p class="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
                                 一个帮助个人高效留存内容、自动总结并沉淀知识的 AI 助手。支持飞书 Webhook 实时响应与多维表格自动记录。
                             </p>
-<a class="text-sm font-bold flex items-center gap-1 group/link" href="projects/ai-memory.html">
-                                查看详情 <span class="iconify transition-transform group-hover/link:translate-x-1" data-icon="lucide:arrow-right"></span>
+<a class="text-sm font-bold flex items-center gap-2 group/link mt-auto" href="projects/ai-memory.html">
+                                查看详情 <span class="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center group-hover/link:bg-black group-hover/link:text-white transition-all"><span class="iconify text-xs" data-icon="lucide:arrow-right"></span></span>
 </a>
 </div>
 </div>
 <!-- 项目 2 -->
-<div class="bg-white rounded-[2rem] overflow-hidden border border-gray-100 card-hover group shadow-sm">
+<div class="bg-white rounded-[2.5rem] overflow-hidden border border-gray-100 card-hover group shadow-sm flex flex-col">
 <div class="aspect-video bg-[#f8f9fb] flex items-center justify-center relative overflow-hidden">
-<img alt="AI评论分析工具 Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://images.unsplash.com/photo-1551288049-bbdac8a28a1e?auto=format&fit=crop&q=80&w=800"/>
-<div class="absolute inset-0 bg-black/5"></div>
+<img alt="从车源运营到流程自动化 Poster" class="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105" decoding="async" loading="lazy" src="assets/images/projects/ai-review-analysis/automation-workflow.jpeg"/>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500"></div>
 </div>
-<div class="p-8">
-<div class="flex gap-2 mb-4">
-<span class="px-3 py-1 bg-emerald-50 text-emerald-600 text-[10px] font-bold rounded-full uppercase">LLM</span>
-<span class="px-3 py-1 bg-gray-100 text-gray-500 text-[10px] font-bold rounded-full uppercase">Data Analysis</span>
+<div class="p-8 md:p-10 flex flex-col flex-grow">
+<div class="flex gap-2 mb-6">
+<span class="px-3 py-1 bg-purple-50 text-purple-600 text-[11px] font-bold rounded-full uppercase tracking-wide">Workflow</span>
+<span class="px-3 py-1 bg-gray-100 text-gray-500 text-[11px] font-bold rounded-full uppercase tracking-wide">Operations</span>
 </div>
-<h3 class="text-xl font-bold mb-2 group-hover:text-emerald-600 transition-colors">AI评论分析工具</h3>
-<p class="text-gray-500 text-sm leading-relaxed mb-6">
-                                利用大模型分析商品评论与用户反馈，自动进行情绪分析与产品优化建议生成，实现需求深度洞察。
+<h3 class="text-2xl font-bold mb-3 group-hover:text-purple-600 transition-colors tracking-tight">从车源运营到流程自动化</h3>
+<p class="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
+                                基于真实二手车车源链路，拆解信息流/状态流/判断流，提出用 AI 与自动化工作流重构运营流程的方案与能力清单。
                             </p>
-<a class="text-sm font-bold flex items-center gap-1 group/link" href="projects/ai-review-analysis.html">
-                                查看详情 <span class="iconify transition-transform group-hover/link:translate-x-1" data-icon="lucide:arrow-right"></span>
+<a class="text-sm font-bold flex items-center gap-2 group/link mt-auto" href="projects/ai-review-analysis.html">
+                                查看详情 <span class="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center group-hover/link:bg-black group-hover/link:text-white transition-all"><span class="iconify text-xs" data-icon="lucide:arrow-right"></span></span>
 </a>
 </div>
 </div>
 <!-- 项目 3 -->
-<div class="bg-white rounded-[2rem] overflow-hidden border border-gray-100 card-hover group shadow-sm">
+<div class="bg-white rounded-[2.5rem] overflow-hidden border border-gray-100 card-hover group shadow-sm flex flex-col">
 <div class="aspect-video bg-[#f8f9fb] flex items-center justify-center relative overflow-hidden">
-<img alt="AI工作流自动化实验 Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&q=80&w=800"/>
-<div class="absolute inset-0 bg-black/5"></div>
+<img alt="AI工作流自动化实验 Poster" class="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105" crossorigin="anonymous" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&q=80&w=800"/>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500"></div>
 </div>
-<div class="p-8">
-<div class="flex gap-2 mb-4">
-<span class="px-3 py-1 bg-purple-50 text-purple-600 text-[10px] font-bold rounded-full uppercase">Automation</span>
-<span class="px-3 py-1 bg-gray-100 text-gray-500 text-[10px] font-bold rounded-full uppercase">Agent</span>
+<div class="p-8 md:p-10 flex flex-col flex-grow">
+<div class="flex gap-2 mb-6">
+<span class="px-3 py-1 bg-purple-50 text-purple-600 text-[11px] font-bold rounded-full uppercase tracking-wide">Automation</span>
+<span class="px-3 py-1 bg-gray-100 text-gray-500 text-[11px] font-bold rounded-full uppercase tracking-wide">Agent</span>
 </div>
-<h3 class="text-xl font-bold mb-2 group-hover:text-purple-600 transition-colors">AI工作流自动化实验</h3>
-<p class="text-gray-500 text-sm leading-relaxed mb-6">
+<h3 class="text-2xl font-bold mb-3 group-hover:text-purple-600 transition-colors tracking-tight">AI工作流自动化实验</h3>
+<p class="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
                                 将 AI 工具与数据系统整合，构建可执行的自动化工作流，提升运营提效与跨平台数据同步效率。
                             </p>
-<a class="text-sm font-bold flex items-center gap-1 group/link" href="projects/ai-workflow.html">
-                                查看详情 <span class="iconify transition-transform group-hover/link:translate-x-1" data-icon="lucide:arrow-right"></span>
+<a class="text-sm font-bold flex items-center gap-2 group/link mt-auto" href="projects/ai-workflow.html">
+                                查看详情 <span class="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center group-hover/link:bg-black group-hover/link:text-white transition-all"><span class="iconify text-xs" data-icon="lucide:arrow-right"></span></span>
 </a>
 </div>
 </div>
 </div>
 </div>
 </section>
-
 <!-- 5.5 Growth Projects 模块 -->
-<section class="py-16" id="growth-projects">
+<section class="py-24" id="growth-projects">
 <div class="max-w-7xl mx-auto px-6">
-<div class="flex justify-between items-end mb-12">
-<h2 class="text-4xl font-bold tracking-tight">Growth Projects</h2>
-<p class="text-gray-500 font-medium">用户增长与运营实践</p>
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-4">
+<div>
+<h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-2">Growth Projects</h2>
+<p class="text-xl text-gray-500 font-light">用户增长与运营实践</p>
 </div>
-<div class="grid md:grid-cols-3 gap-8">
+</div>
+<div class="grid md:grid-cols-3 gap-8 md:gap-10">
 <!-- 项目 1 -->
-<div class="bg-white rounded-[2rem] overflow-hidden border border-gray-100 card-hover group shadow-sm">
+<div class="bg-white rounded-[2.5rem] overflow-hidden border border-gray-100 card-hover group shadow-sm flex flex-col">
 <div class="aspect-video bg-[#f8f9fb] flex items-center justify-center relative overflow-hidden">
-<img alt="校园集市信息整合平台" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800"/>
-<div class="absolute inset-0 bg-black/5"></div>
+<img alt="校园集市信息整合平台" class="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105" crossorigin="anonymous" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800"/>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500"></div>
 </div>
-<div class="p-8">
-<div class="flex gap-2 mb-4">
-<span class="px-3 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold rounded-full uppercase">User Growth</span>
-<span class="px-3 py-1 bg-gray-100 text-gray-500 text-[10px] font-bold rounded-full uppercase">Community</span>
+<div class="p-8 md:p-10 flex flex-col flex-grow">
+<div class="flex gap-2 mb-6">
+<span class="px-3 py-1 bg-blue-50 text-blue-600 text-[11px] font-bold rounded-full uppercase tracking-wide">User Growth</span>
+<span class="px-3 py-1 bg-gray-100 text-gray-500 text-[11px] font-bold rounded-full uppercase tracking-wide">Community</span>
 </div>
-<h3 class="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors">校园集市信息整合平台</h3>
-<p class="text-gray-500 text-sm leading-relaxed mb-6">
+<h3 class="text-2xl font-bold mb-3 group-hover:text-blue-600 transition-colors tracking-tight">校园集市信息整合平台</h3>
+<p class="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
                                 实现平台从0到5000用户的冷启动。策划5场线下活动触达1万+用户，月留存率稳定在 65% 以上。
                             </p>
-<a class="text-sm font-bold flex items-center gap-1 group/link" href="#">
-                                查看详情 <span class="iconify transition-transform group-hover/link:translate-x-1" data-icon="lucide:arrow-right"></span>
+<a class="text-sm font-bold flex items-center gap-2 group/link mt-auto" href="projects/growth-campus-market.html">
+                                查看详情 <span class="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center group-hover/link:bg-black group-hover/link:text-white transition-all"><span class="iconify text-xs" data-icon="lucide:arrow-right"></span></span>
 </a>
 </div>
 </div>
 <!-- 项目 2 -->
-<div class="bg-white rounded-[2rem] overflow-hidden border border-gray-100 card-hover group shadow-sm">
+<div class="bg-white rounded-[2.5rem] overflow-hidden border border-gray-100 card-hover group shadow-sm flex flex-col">
 <div class="aspect-video bg-[#f8f9fb] flex items-center justify-center relative overflow-hidden">
-<img alt="重庆电信校园网品牌运营" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=800"/>
-<div class="absolute inset-0 bg-black/5"></div>
+<img alt="重庆电信校园网品牌运营" class="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105" crossorigin="anonymous" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=800"/>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500"></div>
 </div>
-<div class="p-8">
-<div class="flex gap-2 mb-4">
-<span class="px-3 py-1 bg-emerald-50 text-emerald-600 text-[10px] font-bold rounded-full uppercase">Operations</span>
-<span class="px-3 py-1 bg-gray-100 text-gray-500 text-[10px] font-bold rounded-full uppercase">Brand</span>
+<div class="p-8 md:p-10 flex flex-col flex-grow">
+<div class="flex gap-2 mb-6">
+<span class="px-3 py-1 bg-emerald-50 text-emerald-600 text-[11px] font-bold rounded-full uppercase tracking-wide">Operations</span>
+<span class="px-3 py-1 bg-gray-100 text-gray-500 text-[11px] font-bold rounded-full uppercase tracking-wide">Brand</span>
 </div>
-<h3 class="text-xl font-bold mb-2 group-hover:text-emerald-600 transition-colors">重庆电信校园网品牌运营</h3>
-<p class="text-gray-500 text-sm leading-relaxed mb-6">
+<h3 class="text-2xl font-bold mb-3 group-hover:text-emerald-600 transition-colors tracking-tight">重庆电信校园网品牌运营</h3>
+<p class="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
                                 从零搭建校园推广团队，活动覆盖 4万+ 师生，月活跃率从 58% 提升至 72%，显著提升用户粘性。
                             </p>
-<a class="text-sm font-bold flex items-center gap-1 group/link" href="#">
-                                查看详情 <span class="iconify transition-transform group-hover/link:translate-x-1" data-icon="lucide:arrow-right"></span>
+<a class="text-sm font-bold flex items-center gap-2 group/link mt-auto" href="projects/growth-telecom-campus-network.html">
+                                查看详情 <span class="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center group-hover/link:bg-black group-hover/link:text-white transition-all"><span class="iconify text-xs" data-icon="lucide:arrow-right"></span></span>
 </a>
 </div>
 </div>
 <!-- 项目 3 -->
-<div class="bg-white rounded-[2rem] overflow-hidden border border-gray-100 card-hover group shadow-sm">
+<div class="bg-white rounded-[2.5rem] overflow-hidden border border-gray-100 card-hover group shadow-sm flex flex-col">
 <div class="aspect-video bg-[#f8f9fb] flex items-center justify-center relative overflow-hidden">
-<img alt="教育培训机构市场增长实践" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800"/>
-<div class="absolute inset-0 bg-black/5"></div>
+<img alt="教育培训机构市场增长实践" class="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105" crossorigin="anonymous" decoding="async" loading="lazy" src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=800"/>
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500"></div>
 </div>
-<div class="p-8">
-<div class="flex gap-2 mb-4">
-<span class="px-3 py-1 bg-purple-50 text-purple-600 text-[10px] font-bold rounded-full uppercase">Sales</span>
-<span class="px-3 py-1 bg-gray-100 text-gray-500 text-[10px] font-bold rounded-full uppercase">Market</span>
+<div class="p-8 md:p-10 flex flex-col flex-grow">
+<div class="flex gap-2 mb-6">
+<span class="px-3 py-1 bg-purple-50 text-purple-600 text-[11px] font-bold rounded-full uppercase tracking-wide">Sales</span>
+<span class="px-3 py-1 bg-gray-100 text-gray-500 text-[11px] font-bold rounded-full uppercase tracking-wide">Market</span>
 </div>
-<h3 class="text-xl font-bold mb-2 group-hover:text-purple-600 transition-colors">教育培训机构市场增长实践</h3>
-<p class="text-gray-500 text-sm leading-relaxed mb-6">
+<h3 class="text-2xl font-bold mb-3 group-hover:text-purple-600 transition-colors tracking-tight">教育培训机构市场增长实践</h3>
+<p class="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
                                 带领20人团队实现课程销售额超 25万，成交率稳居前三。通过话术优化与地推策略实现精准获客。
                             </p>
-<a class="text-sm font-bold flex items-center gap-1 group/link" href="#">
-                                查看详情 <span class="iconify transition-transform group-hover/link:translate-x-1" data-icon="lucide:arrow-right"></span>
+<a class="text-sm font-bold flex items-center gap-2 group/link mt-auto" href="projects/growth-education-conversion.html">
+                                查看详情 <span class="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center group-hover/link:bg-black group-hover/link:text-white transition-all"><span class="iconify text-xs" data-icon="lucide:arrow-right"></span></span>
 </a>
 </div>
 </div>
@@ -325,139 +599,81 @@
 </div>
 </section>
 <!-- 6. Insights 模块 -->
-<section class="max-w-7xl mx-auto px-6 py-16" id="insights">
-<div class="flex justify-between items-end mb-12">
-<h2 class="text-4xl font-bold tracking-tight">Insights</h2>
-<p class="text-gray-500 font-medium">AI产品与增长实践思考</p>
+<section class="max-w-7xl mx-auto px-6 py-24" id="insights">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-2">Insights</h2>
+<p class="text-xl text-gray-500 font-light">AI产品与增长实践思考</p>
+</div>
 </div>
 <div class="grid md:grid-cols-3 gap-8">
 <!-- 文章 1 -->
-<a href="insights/ten-year-planning.html" class="p-1 w-full rounded-[2.5rem] bg-gradient-to-br from-gray-100 to-white border border-gray-200 shadow-sm card-hover cursor-pointer group block">
-<div class="bg-white rounded-[2.3rem] p-8 h-full">
-<h3 class="text-xl font-bold mb-6 group-hover:text-gray-700 transition-colors leading-tight">
+<a href="insights/ten-year-planning.html" class="p-1 w-full rounded-[2.5rem] bg-gradient-to-br from-gray-100 to-white border border-gray-200 shadow-sm card-hover cursor-pointer group block h-full">
+<div class="bg-white rounded-[2.3rem] p-10 h-full flex flex-col justify-between">
+<h3 class="text-2xl font-bold mb-8 group-hover:text-gray-700 transition-colors leading-tight tracking-tight">
                             当技术变化比人生更快：我开始怀疑“十年规划”这件事
                         </h3>
 <div class="flex items-center gap-2 text-black font-bold text-sm">
-                            阅读全文 <span class="iconify" data-icon="lucide:chevron-right"></span>
+                            阅读全文 <span class="iconify transition-transform group-hover:translate-x-1" data-icon="lucide:chevron-right"></span>
 </div>
 </div>
 </a>
 <!-- 文章 2 -->
-<a href="insights/social-survival-law.html" class="p-1 w-full rounded-[2.5rem] bg-gradient-to-br from-gray-100 to-white border border-gray-200 shadow-sm card-hover cursor-pointer group block">
-<div class="bg-white rounded-[2.3rem] p-8 h-full">
-<h3 class="text-xl font-bold mb-6 group-hover:text-gray-700 transition-colors leading-tight">
+<a href="insights/social-survival-law.html" class="p-1 w-full rounded-[2.5rem] bg-gradient-to-br from-gray-100 to-white border border-gray-200 shadow-sm card-hover cursor-pointer group block h-full">
+<div class="bg-white rounded-[2.3rem] p-10 h-full flex flex-col justify-between">
+<h3 class="text-2xl font-bold mb-8 group-hover:text-gray-700 transition-colors leading-tight tracking-tight">
                             欲举先予，遇高则低：我逐渐理解的一种社会生存法则
                         </h3>
 <div class="flex items-center gap-2 text-black font-bold text-sm">
-                            阅读全文 <span class="iconify" data-icon="lucide:chevron-right"></span>
+                            阅读全文 <span class="iconify transition-transform group-hover:translate-x-1" data-icon="lucide:chevron-right"></span>
 </div>
 </div>
 </a>
 <!-- 文章 3 -->
-<a href="insights/ai-warfare-evolution.html" class="p-1 w-full rounded-[2.5rem] bg-gradient-to-br from-gray-100 to-white border border-gray-200 shadow-sm card-hover cursor-pointer group block">
-<div class="bg-white rounded-[2.3rem] p-8 h-full">
-<h3 class="text-xl font-bold mb-6 group-hover:text-gray-700 transition-colors leading-tight">
+<a href="insights/ai-warfare-evolution.html" class="p-1 w-full rounded-[2.5rem] bg-gradient-to-br from-gray-100 to-white border border-gray-200 shadow-sm card-hover cursor-pointer group block h-full">
+<div class="bg-white rounded-[2.3rem] p-10 h-full flex flex-col justify-between">
+<h3 class="text-2xl font-bold mb-8 group-hover:text-gray-700 transition-colors leading-tight tracking-tight">
                             从肌肉到算法：AI时代可能会重写“什么是好士兵”
                         </h3>
 <div class="flex items-center gap-2 text-black font-bold text-sm">
-                            阅读全文 <span class="iconify" data-icon="lucide:chevron-right"></span>
+                            阅读全文 <span class="iconify transition-transform group-hover:translate-x-1" data-icon="lucide:chevron-right"></span>
 </div>
 </div>
 </a>
 </div>
 </section>
-
 <!-- 7. Tools 模块 -->
-<section class="max-w-7xl mx-auto px-6 py-16 border-t border-gray-100" id="tools">
-<h2 class="text-3xl font-bold mb-10 tracking-tight text-center">Tools I Use</h2>
+<section class="max-w-7xl mx-auto px-6 py-24 border-t border-gray-100" id="tools">
+<h2 class="text-3xl font-bold mb-12 tracking-tight text-center text-gray-300">TOOLS I USE</h2>
 <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
 <!-- AI & Dev -->
-<div class="inline-flex items-center gap-2 px-6 py-3 bg-white border border-gray-100 rounded-full shadow-sm text-sm font-semibold hover:border-black transition-all cursor-default">
-<span class="iconify text-xl text-blue-500" data-icon="logos:openai-icon"></span> ChatGPT / Grok
+<div class="inline-flex items-center gap-3 px-6 py-4 bg-white border border-gray-100 rounded-2xl shadow-sm text-sm font-semibold hover:border-black/20 hover:shadow-md transition-all cursor-default group">
+<span class="iconify text-2xl text-blue-500 group-hover:scale-110 transition-transform" data-icon="logos:openai-icon"></span> ChatGPT
                 </div>
-<div class="inline-flex items-center gap-2 px-6 py-3 bg-white border border-gray-100 rounded-full shadow-sm text-sm font-semibold hover:border-black transition-all cursor-default">
-<span class="iconify text-xl text-orange-500" data-icon="logos:anthropic-icon"></span> Claude / Gemini
+<div class="inline-flex items-center gap-3 px-6 py-4 bg-white border border-gray-100 rounded-2xl shadow-sm text-sm font-semibold hover:border-black/20 hover:shadow-md transition-all cursor-default group">
+<span class="iconify text-2xl text-orange-500 group-hover:scale-110 transition-transform" data-icon="logos:anthropic-icon"></span> Claude
                 </div>
-<div class="inline-flex items-center gap-2 px-6 py-3 bg-white border border-gray-100 rounded-full shadow-sm text-sm font-semibold hover:border-black transition-all cursor-default">
-<span class="iconify text-xl" data-icon="logos:python"></span> FastAPI / LangGraph
+<div class="inline-flex items-center gap-3 px-6 py-4 bg-white border border-gray-100 rounded-2xl shadow-sm text-sm font-semibold hover:border-black/20 hover:shadow-md transition-all cursor-default group">
+<span class="iconify text-2xl group-hover:scale-110 transition-transform" data-icon="logos:python"></span> Python
                 </div>
-<div class="inline-flex items-center gap-2 px-6 py-3 bg-white border border-gray-100 rounded-full shadow-sm text-sm font-semibold hover:border-black transition-all cursor-default">
-<span class="iconify text-xl text-blue-600" data-icon="simple-icons:feishu"></span> Feishu API
+<div class="inline-flex items-center gap-3 px-6 py-4 bg-white border border-gray-100 rounded-2xl shadow-sm text-sm font-semibold hover:border-black/20 hover:shadow-md transition-all cursor-default group">
+<span class="iconify text-2xl text-blue-600 group-hover:scale-110 transition-transform" data-icon="simple-icons:feishu"></span> Feishu API
                 </div>
 <!-- Data & Automation -->
-<div class="inline-flex items-center gap-2 px-6 py-3 bg-white border border-gray-100 rounded-full shadow-sm text-sm font-semibold hover:border-black transition-all cursor-default">
-<span class="iconify text-xl text-green-600" data-icon="vscode-icons:file-type-excel"></span> Excel / SQL
+<div class="inline-flex items-center gap-3 px-6 py-4 bg-white border border-gray-100 rounded-2xl shadow-sm text-sm font-semibold hover:border-black/20 hover:shadow-md transition-all cursor-default group">
+<span class="iconify text-2xl text-green-600 group-hover:scale-110 transition-transform" data-icon="vscode-icons:file-type-excel"></span> Excel
                 </div>
 <!-- Design & Others -->
-<div class="inline-flex items-center gap-2 px-6 py-3 bg-white border border-gray-100 rounded-full shadow-sm text-sm font-semibold hover:border-black transition-all cursor-default">
-<span class="iconify text-xl" data-icon="logos:figma"></span> Canva / Figma
+<div class="inline-flex items-center gap-3 px-6 py-4 bg-white border border-gray-100 rounded-2xl shadow-sm text-sm font-semibold hover:border-black/20 hover:shadow-md transition-all cursor-default group">
+<span class="iconify text-2xl group-hover:scale-110 transition-transform" data-icon="logos:figma"></span> Figma
                 </div>
-<div class="inline-flex items-center gap-2 px-6 py-3 bg-white border border-gray-100 rounded-full shadow-sm text-sm font-semibold hover:border-black transition-all cursor-default">
-<span class="iconify text-xl" data-icon="logos:notion-icon"></span> Notion / PPT
+<div class="inline-flex items-center gap-3 px-6 py-4 bg-white border border-gray-100 rounded-2xl shadow-sm text-sm font-semibold hover:border-black/20 hover:shadow-md transition-all cursor-default group">
+<span class="iconify text-2xl group-hover:scale-110 transition-transform" data-icon="logos:notion-icon"></span> Notion
                 </div>
 </div>
 </section>
 </main>
-<!-- 8. Footer 页脚 -->
-<footer class="bg-black text-white py-16">
-<div class="max-w-7xl mx-auto px-6">
-<div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
-<div class="max-w-2xl">
-<h2 class="text-5xl md:text-7xl font-bold leading-tight mb-8">
-                        让我们一起<br/>把想法做成产品
-                    </h2>
-<p class="text-gray-400 text-lg mb-8">
-                        WaiTao AI Lab: AI 产品探索者 × 增长实践者
-                    </p>
-<div class="space-y-4">
-<a class="text-2xl font-semibold block underline decoration-gray-700 underline-offset-8 hover:decoration-white transition-all" href="mailto:WaiTao1229@163.com">
-                        WaiTao1229@163.com
-                    </a>
-<p class="text-2xl font-semibold text-white">15310685846</p>
-</div>
-</div>
-<div class="space-y-6">
-<h4 class="text-gray-500 font-bold uppercase tracking-widest text-xs">SOCIALS</h4>
-<ul class="space-y-4 font-medium">
-<li><a class="hover:text-gray-400 transition-colors" href="#">GitHub</a></li>
-<li><a class="hover:text-gray-400 transition-colors" href="#">LinkedIn</a></li>
-</ul>
-</div>
-</div>
-<div class="pt-12 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-6">
-<div class="flex items-center gap-4">
-<div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
-<span class="font-bold text-white">A</span>
-</div>
-<p class="text-gray-500 text-sm">© 2026 AI Product Lab. Designed by Passion.</p>
-</div>
-<div class="text-gray-600 text-sm">
-                    北京 · 上海 · 远程协作
-                </div>
-</div>
-</div>
-</footer>
-<script>
-        // 实现简单的滚动监听，为当前区域的导航加粗或下划线（可选实现）
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('nav a');
-            
-            let current = "";
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 100) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('text-black', 'font-bold');
-                if (link.getAttribute('href').includes(current)) {
-                    link.classList.add('text-black', 'font-bold');
-                }
-            });
-        });
-    </script>
+<script src="components.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

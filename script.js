@@ -56,28 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener('click', e => {
-            e.stopPropagation();
-            mobileMenu.classList.toggle('hidden');
-            mobileMenu.classList.toggle('flex');
-        });
-
-        document.addEventListener('click', e => {
-            if (
-                !mobileMenu.classList.contains('hidden') &&
-                !mobileMenu.contains(e.target) &&
-                !menuBtn.contains(e.target)
-            ) {
-                mobileMenu.classList.add('hidden');
-                mobileMenu.classList.remove('flex');
-            }
-        });
-    }
-
     if (!reduceMotion && window.gsap && window.ScrollTrigger) {
         window.gsap.registerPlugin(window.ScrollTrigger);
 
